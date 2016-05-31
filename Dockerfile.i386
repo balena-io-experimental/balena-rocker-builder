@@ -1,4 +1,4 @@
-FROM resin/raspberrypi-alpine-golang:1.5
+FROM resin/edison-alpine-golang:1.5
 
 ENV ROCKER_VERSION 1.2.0
 ENV ROCKER_COMPOSE_VERSION 0.1.5

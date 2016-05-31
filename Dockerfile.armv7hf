@@ -1,4 +1,4 @@
-build.shFROM resin/raspberrypi2-alpine-golang:1.5
+FROM resin/raspberrypi2-alpine-golang:1.5
 
 ENV ROCKER_VERSION 1.2.0
 ENV ROCKER_COMPOSE_VERSION 0.1.5
