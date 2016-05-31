@@ -1,0 +1,12 @@
+FROM resin/raspberrypi-alpine-golang:1.5
+
+ENV ROCKER_VERSION 1.2.0
+ENV ROCKER_COMPOSE_VERSION 0.1.5
+ENV GOARCH 386
+
+RUN git clone --branch ${ROCKER_VERSION} https://github.com/grammarly/rocker.git ${GOPATH}/src/github.com/grammarly/rocker
+RUN git clone --branch ${ROCKER_COMPOSE_VERSION} https://github.com/grammarly/rocker-compose.git ${GOPATH}/src/github.com/grammarly/rocker-compose
+
+COPY build.sh /usr/bin/
+
+ENTRYPOINT ["/usr/bin/build.sh"]
